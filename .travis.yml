@@ -2,7 +2,7 @@ language: c
 matrix:
     include:
         - os: linux
-          dist: trusty
+          dist: focal
         - os: osx
 script:
     - mkdir build

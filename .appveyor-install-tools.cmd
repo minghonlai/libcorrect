@@ -22,15 +22,8 @@ if DEFINED MINGW_PATH @set "PATH=%PATH%;%MINGW_PATH%"
 if DEFINED MINGW_PATH g++ -v
 
 ::###########################################################################
-:: Install a recent CMake
+:: Dump CMake version
 ::###########################################################################
-if NOT EXIST cmake (
-  appveyor DownloadFile https://cmake.org/files/v3.7/cmake-3.7.2-win64-x64.zip -FileName cmake.zip
-  7z x cmake.zip -oC:\projects\tools > nul
-  move C:\projects\tools\cmake-* C:\projects\tools\cmake
-  rm cmake.zip
-)
-@set PATH=C:\projects\tools\cmake\bin;%PATH%
 cmake --version
 
 ::###########################################################################
